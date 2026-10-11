@@ -1,0 +1,393 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #263d2e;
+    background: #ffffff;
+}
+
+/* Navbar */
+.navbar-custom,
+.footer {
+    background: #10452d;
+}
+
+.navbar-brand {
+    font-size: 23px;
+}
+
+.brand-subtitle {
+    display: block;
+    margin-left: 34px;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.nav-link {
+    margin-left: 10px;
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #bce78a !important;
+}
+
+/* Hero Banner */
+.hero {
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    background-color: #f1f7e7;
+    background-image:
+        linear-gradient(90deg, #f1f7e7 0%, #f1f7e7dd 38%, transparent 100%),
+        url("https://images.unsplash.com/photo-1542838132-92c53300491e?w=1600");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero-text {
+    max-width: 440px;
+    padding: 35px 0;
+}
+
+.eyebrow {
+    color: #477b42;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 65px);
+    font-weight: bold;
+    line-height: 1;
+    color: #16492f;
+}
+
+.hero h1 span {
+    color: #71b83d;
+}
+
+.hero-text > p:not(.eyebrow) {
+    line-height: 1.7;
+    margin: 20px 0;
+}
+
+/* Benefits */
+.benefits {
+    background: #eff7e8;
+    padding: 22px 0;
+    border-bottom: 1px solid #dfebd6;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+}
+
+.benefit span {
+    background: #176638;
+    color: white;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+    flex-shrink: 0;
+}
+
+.benefit strong,
+.benefit small {
+    display: block;
+}
+
+.benefit strong {
+    color: #174d30;
+    font-size: 14px;
+}
+
+.benefit small {
+    color: #68766a;
+    font-size: 12px;
+}
+
+/* Section headings */
+.section-title {
+    color: #176638;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.section-description {
+    color: #68766a;
+    font-size: 14px;
+}
+
+.search-input {
+    padding: 12px;
+    border: 1px solid #dce6da;
+}
+
+.search-input:focus,
+.form-control:focus {
+    border-color: #71ad72;
+    box-shadow: 0 0 0 3px #71ad7225;
+}
+
+/* Product cards */
+.product-card {
+    height: 100%;
+    border: 1px solid #e3eae1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px #0000000b;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px #00000015;
+}
+
+.product-card img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    background: #f2f5ed;
+}
+
+.product-card .card-body {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card h5 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #205537;
+}
+
+.product-description {
+    font-size: 13px;
+    color: #68766a;
+    min-height: 40px;
+}
+
+.product-price {
+    font-size: 17px;
+    font-weight: bold;
+    color: #198044;
+    margin-top: auto;
+}
+
+.btn-success {
+    background-color: #176638;
+    border-color: #176638;
+}
+
+.btn-success:hover {
+    background-color: #10452d;
+    border-color: #10452d;
+}
+
+/* Shopping cart */
+.cart-box {
+    padding: 20px;
+    border: 1px solid #e1e9df;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #0000000b;
+    position: sticky;
+    top: 85px;
+}
+
+.cart-box h3 {
+    font-size: 21px;
+    font-weight: bold;
+    color: #176638;
+    margin-bottom: 20px;
+}
+
+.empty-cart {
+    background: #f3f7ef;
+    padding: 35px 10px;
+    text-align: center;
+    border-radius: 8px;
+    color: #68766a;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e4eae1;
+    font-size: 13px;
+}
+
+.cart-item-name {
+    font-weight: bold;
+}
+
+.remove-btn {
+    border: none;
+    background: #fde9e6;
+    color: #a12d22;
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+/* About */
+.about-section {
+    background: #eff7e8;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.about-icon {
+    font-size: 60px;
+}
+
+.about-section h2 {
+    color: #176638;
+    font-weight: bold;
+}
+
+.about-section p {
+    color: #536457;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* Enquiry form */
+.form-box {
+    padding: 25px;
+    background: #f3f8ed;
+    border: 1px solid #e2eddb;
+    border-radius: 12px;
+}
+
+.form-box > p,
+.contact-section > p {
+    color: #68766a;
+    font-size: 14px;
+}
+
+.form-label {
+    color: #355540;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-control {
+    padding: 11px;
+}
+
+/* Contact */
+.contact-section {
+    padding: 25px;
+    border-radius: 12px;
+    background: #fbf9ef;
+    border: 1px solid #eeecdf;
+}
+
+.contact-section a:not(.btn) {
+    color: #176638;
+    text-decoration: none;
+}
+
+.contact-section a:not(.btn):hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    color: white;
+    padding: 25px 10px;
+    margin-top: 40px;
+}
+
+.footer h5 {
+    font-weight: bold;
+}
+
+.footer p {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+/* Mobile responsive design */
+@media (max-width: 767px) {
+    .hero {
+        min-height: 320px;
+        background-position: 60% center;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-text {
+        max-width: 330px;
+    }
+
+    .hero-text > p:not(.eyebrow) {
+        max-width: 290px;
+    }
+
+    .benefit {
+        gap: 8px;
+    }
+
+    .benefit span {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .product-card img {
+        height: 125px;
+    }
+
+    .product-card .card-body {
+        padding: 10px;
+    }
+
+    .product-card h5 {
+        font-size: 14px;
+    }
+
+    .product-description {
+        font-size: 12px;
+    }
+
+    .cart-box {
+        position: static;
+    }
+
+    .about-section {
+        padding: 22px;
+    }
+
+    .form-box,
+    .contact-section {
+        padding: 18px;
+    }
+}

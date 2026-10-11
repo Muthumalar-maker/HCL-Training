@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrganicMart - Organic Food & Grocery</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                🌿 OrganicMart
+                <small class="brand-subtitle">Fresh • Healthy • Natural</small>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#enquiry">Enquiry</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cart">
+                            🛒 Cart (<span id="cart-count">0</span>)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="eyebrow">100% FRESH & NATURAL</p>
+                <h1>Fresh Food<br><span>Better Life</span></h1>
+                <p>
+                    Organic fruits, vegetables and groceries
+                    for a healthier you and a greener tomorrow.
+                </p>
+                <a href="#products" class="btn btn-success rounded-pill px-4">
+                    Shop Now →
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-6 col-lg-3">
+                    <div class="benefit">
+                        <span>🌱</span>
+                        <div><strong>Organic Food</strong><small>Fresh and natural</small></div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="benefit">
+                        <span>🚚</span>
+                        <div><strong>Fast Delivery</strong><small>At your doorstep</small></div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="benefit">
+                        <span>🛡️</span>
+                        <div><strong>Safe Shopping</strong><small>Simple and secure</small></div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="benefit">
+                        <span>💚</span>
+                        <div><strong>Friendly Support</strong><small>Here to help you</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products and Shopping Cart -->
+    <main class="container my-5">
+        <div class="row g-4">
+
+            <!-- Products -->
+            <section class="col-lg-9" id="products">
+                <h2 class="section-title">🌿 Our Organic Products</h2>
+                <p class="section-description">
+                    Fresh fruits, vegetables and groceries selected for you.
+                </p>
+
+                <input type="text" id="search" class="form-control search-input mb-4"
+                    placeholder="Search fruits, vegetables and groceries...">
+
+                <div class="row g-3" id="product-list"></div>
+            </section>
+
+            <!-- Shopping Cart -->
+            <aside class="col-lg-3" id="cart">
+                <div class="cart-box">
+                    <h3>🛒 Shopping Cart</h3>
+
+                    <div id="cart-items">
+                        <p class="empty-cart">Your cart is empty.</p>
+                    </div>
+
+                    <hr>
+                    <h5>Total: ₹<span id="total">0</span></h5>
+
+                    <button class="btn btn-success w-100 mt-3"
+                        onclick="checkout()">Place Order</button>
+
+                    <button class="btn btn-outline-success w-100 mt-2"
+                        onclick="clearCart()">Clear Cart</button>
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- About -->
+        <section id="about" class="about-section mt-5">
+            <div class="row align-items-center">
+                <div class="col-md-2 text-center">
+                    <span class="about-icon">🌿</span>
+                </div>
+                <div class="col-md-10">
+                    <h2>Good Food, Good Mood</h2>
+                    <p>
+                        Welcome to OrganicMart! We make grocery shopping simple
+                        by bringing fruits, vegetables and everyday essentials
+                        together in one place. Choose your favourites and enjoy
+                        a fresh-food shopping experience.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enquiry -->
+        <section id="enquiry" class="mt-5">
+            <div class="form-box">
+                <h2 class="section-title">🌱 Product Enquiry</h2>
+                <p>Have questions about our products? Send us your enquiry!</p>
+
+                <form id="enquiryForm">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="enquiryName" class="form-label">Your Name</label>
+                            <input type="text" id="enquiryName" class="form-control"
+                                placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="enquiryEmail" class="form-label">Email Address</label>
+                            <input type="email" id="enquiryEmail" class="form-control"
+                                placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="enquiryProduct" class="form-label">Product Name</label>
+                            <input type="text" id="enquiryProduct" class="form-control"
+                                placeholder="Which product are you interested in?" required>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="enquiryMessage" class="form-label">Your Message</label>
+                            <textarea id="enquiryMessage" class="form-control"
+                                rows="4" placeholder="Write your enquiry..." required></textarea>
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-success">
+                                ✉ Submit Enquiry
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact-section mt-4">
+            <h2 class="section-title">✉ Contact Us</h2>
+            <p>We are always happy to help you!</p>
+            <p>📧 Email: <a href="mailto:greenbasket@example.com">greenbasket@example.com</a></p>
+            <p>📞 Phone: +91 98765 43210</p>
+            <p>📍 Address: Dindigul, Tamil Nadu</p>
+            <a href="mailto:greenbasket@example.com" class="btn btn-success">
+                Email Us
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <h5>🌿 OrganicMart</h5>
+            <p>Fresh Food • Healthy Living • A Greener Tomorrow</p>
+            <p class="mb-0">© 2026 OrganicMart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 70px;
+}
+
+.navbar-brand {
+    font-size: 26px;
+    color: #ffc107 !important;
+}
+
+.nav-link {
+    margin-left: 12px;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+/* Hero Section */
+.hero {
+    height: 600px;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Search Box */
+.search-box {
+    background: white;
+    padding: 30px;
+    margin-top: -40px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Destination Cards */
+.travel-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s;
+}
+
+.travel-card:hover {
+    transform: translateY(-8px);
+}
+
+.travel-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.travel-card .card-body {
+    padding: 22px;
+}
+
+.travel-card .card-title {
+    font-weight: bold;
+}
+
+/* Packages */
+.packages {
+    background-color: #f2f7fa;
+}
+
+.package-box {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.package-box:hover {
+    transform: translateY(-5px);
+}
+
+.package-box h2 {
+    color: #0d6efd;
+    margin: 20px 0;
+}
+
+/* About */
+#about img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+}
+
+/* Contact */
+.contact-section {
+    background-color: #f8f9fa;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.3);
+}
+
+/* Footer */
+footer {
+    line-height: 1.8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero {
+        height: 480px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .search-box {
+        margin-top: 20px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+    }
+}

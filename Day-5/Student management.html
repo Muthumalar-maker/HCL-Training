@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="Student Management.css">
+</head>
+<body>
+    <nav>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+            <div>
+                <a href="add_student.html">Add </a> |
+                <a href="view_students.html">View</a> |
+                <a href="edit_student.html">Edit</a> |
+                <a href="delete_student.html">Delete</a>
+            </div>
+        </div>
+    </nav>
+    <center>
+        <h2>Student Management</h2>
+        <p>PSNA college of Engineering and Technology</p>
+    <form user="form">
+    <table style="border: 3px solid black;border-radius: 5px;background-color: white;padding: 50px;">
+    <tr>
+    <td><label>Enter name: </label></td>
+    <td><input type="text" placeholder="name"></td>
+    </tr>
+    <tr>
+    <td><label>Roll Number: </label></td>
+    <td><input type="number" id="roll"></td>
+    </tr>
+    <tr>
+    <td><label>Department: </label></td>
+    <td><input type="text" id="department"></td>
+    </tr>
+    <tr>
+        <td><label>Year: </label></td>
+        <td><input type="number" id="year"></td>
+    </tr>
+        <tr>
+        <td><label>Gender: </label></td>
+        <td>
+            <input type="radio" id="male" name="gender">
+            <label>Male</label>
+            <input type="radio" id="female" name="gender">
+            <label>Female</label>
+        </td>
+    </tr>
+    <tr>
+        <td><label>Mobile No: </label></td>
+        <td><input type="number" id="mobile"></td>
+    </tr>
+    <tr>
+        <td><button type="submit">Add </button>
+        <button type="Delete">Delete</button>
+        </td>
+    </tr>
+</table>
+    </form>
+</center>
+</body>
+</html>

@@ -1,0 +1,15 @@
+h1{
+    color:blue
+}
+
+div{
+    background-color:greenyellow
+}
+
+tr,
+td{
+    cursor: pointer;
+     border-color:black;
+    border-bottom: 1px solid black;
+    background-color:lightgray;
+}
